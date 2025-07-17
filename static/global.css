@@ -1,0 +1,131 @@
+@import url('colors.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    height: 92px;
+    padding: 1em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--gray-700);
+}
+
+nav {
+    display: flex;
+    gap: 2em;
+
+    a {
+        color: var(--gray-200);
+        text-decoration: none;
+    }
+    a.active {
+        border-bottom: 2px solid var(--gray-500)
+    }
+}
+
+main {
+    padding: 2em;
+    color: var(--gray-950);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1em;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.title {
+    border-left: 4px solid var(--gray-950);
+    padding: 2em;
+    margin-bottom: 1.5em;
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+.image {
+    width: 100%;
+    height: 250px;
+    background-color: var(--gray-200);
+    box-shadow: 0 0 8px 2px var(--gray-800);
+    border-radius: .5em;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: .75em;
+}
+article p {
+    text-indent: 2em;
+    text-align: justify;
+}
+
+.extras {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    padding: 2em 2em;
+
+    h3 {
+        font-size: 1.2em;
+        font-weight: normal;
+        border-bottom: 2px solid var(--gray-950);
+    }
+    
+    .alunos {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 1em;
+
+        a {
+            color: var(--gray-900);
+        }
+    }
+
+    .others {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        .image {
+            box-shadow: 0 0 0 0;
+            border: 2px solid black;
+            border-bottom: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .comment {
+            display: flex;
+            flex-direction: column;
+            .comContainer {
+                background-color: var(--gray-200);
+                border: 2px solid black;
+                padding: 1em;
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+                span {
+                    color: var(--gray-800);
+                    font-weight: 300;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
