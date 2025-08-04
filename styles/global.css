@@ -235,6 +235,8 @@ h2 {
         translate: -50% -50%;
         font-weight: 300;
         font-size: 0.85em;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: .5em;
     }
 }
 
