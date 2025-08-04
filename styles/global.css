@@ -237,6 +237,7 @@ h2 {
         font-size: 0.85em;
         background-color: rgba(0, 0, 0, 0.5);
         padding: .5em;
+        border-radius: 8px;
     }
 }
 
