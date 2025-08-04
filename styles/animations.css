@@ -1,0 +1,128 @@
+@keyframes alternateToRed {
+    0% {
+        color: var(--discord-blue);
+        fill: var(--discord-blue);
+    }
+
+    13% {
+        color: var(--discord-blue);
+        fill: var(--discord-blue);
+    }
+
+    15% {
+        color: var(--discord-red);
+        fill: var(--discord-red);
+    }
+
+    23% {
+        color: var(--discord-red);
+        fill: var(--discord-red);
+    }
+
+    25% {
+        color: var(--discord-blue);
+        fill: var(--discord-blue);
+    }
+
+    48% {
+        color: var(--discord-blue);
+        fill: var(--discord-blue);
+    }
+
+    50% {
+        color: var(--discord-red);
+        fill: var(--discord-red);
+    }
+
+    98% {
+        color: var(--discord-red);
+        fill: var(--discord-red);
+    }
+
+    100% {
+        color: var(--discord-blue);
+        fill: var(--discord-blue);
+    }
+}
+
+@keyframes alternatingShadow {
+    0% {
+        box-shadow: 0 0 24px 4px var(--discord-blue);
+    }
+
+    13% {
+        box-shadow: 0 0 24px 4px var(--discord-blue);
+    }
+
+    15% {
+        box-shadow: 0 0 24px 4px var(--discord-red);
+    }
+
+    23% {
+        box-shadow: 0 0 24px 4px var(--discord-red);
+    }
+
+    25% {
+        box-shadow: 0 0 24px 4px var(--discord-blue);
+    }
+
+    48% {
+        box-shadow: 0 0 24px 4px var(--discord-blue);
+    }
+
+    50% {
+        box-shadow: 0 0 24px 4px var(--discord-red);
+    }
+
+    98% {
+        box-shadow: 0 0 24px 4px var(--discord-red);
+    }
+
+    100% {
+        box-shadow: 0 0 24px 4px var(--discord-blue);
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+
+    15% {
+        transform: translateY(-10px);
+    }
+
+    25% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes showUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+}

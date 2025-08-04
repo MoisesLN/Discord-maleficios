@@ -7,26 +7,28 @@
     <title>Discord: benefícios ou malefícios?</title>
     <link rel="stylesheet" href="styles/global.css">
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+    <script src="scripts/main.js" defer></script>
 </head>
 
 <body>
     <header>
-        <nav>
-            <a href="#" class="active">Início</a>
-            <a href="#">Introdução</a>
-            <a href="#">Exclusão</a>
-            <a href="#">Malefícios</a>
-            <a href="#">Conclusão</a>
+        <nav id="nav">
+            <i class="bi bi-list" id="navToggle"></i>
+            <a href="#inicio" class="active">Início</a>
+            <a href="#introducao">Introdução</a>
+            <a href="#exclusao">Exclusão</a>
+            <a href="#maleficios">Malefícios</a>
+            <a href="#conclusao">Conclusão</a>
         </nav>
     </header>
     <main>
-        <section class="inicio">
+        <section class="inicio" id="inicio">
             <div class="blur-overlay"></div>
-            <div class="title">
+            <div class="title initial-animation">
                 <h1><span>Discord:</span> um lugar de conexões ou malefícios?</h1>
                 <h3>Entre amizades e abusos digitais, o que o Discord realmente promove?</h3>
             </div>
-            <div class="logo">
+            <div class="logo initial-animation">
                 <svg viewBox="0 -28.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
                     <g>
@@ -39,7 +41,7 @@
             </div>
         </section>
 
-        <section class="introducao">
+        <section class="introducao" id="introducao">
             <h2 class="title">🧩 O que é discord, e por que ele importa?</h2>
             <div class="grid-container">
                 <article>
@@ -69,7 +71,7 @@
                     </p>
                 </article>
                 <figure>
-                    <img src="assets/wumpushappy.gif" alt="Mascote do discord dando olá">
+                    <img src="assets/wumpushappy.gif" alt="Mascote do discord dando olá" id="wumpus">
                     <figcaption>
                         <i class="bi bi-info-circle"></i>
                         Wumpus, o mascote do Discord.
@@ -78,11 +80,11 @@
             </div>
         </section>
 
-        <section class="exclusao">
+        <section class="exclusao" id="exclusao">
             <h2 class="title">Um lugar para todos… ou para alguns? 🌐</h2>
             <div class="grid-container">
                 <figure>
-                    <img src="assets/wumpussad.gif" alt="Mascote do discord dando olá">
+                    <img src="assets/wumpussad.gif" alt="Mascote do discord dando olá" id="wumpus">
                     <figcaption>
                         <i class="bi bi-info-circle"></i>
                         Wumpus, o mascote do Discord.
@@ -112,8 +114,44 @@
                         bem-intencionados.
                     </p>
                 </article>
-
             </div>
+        </section>
+
+        <section class="maleficios" id="maleficios">
+            <h2 class="title">🚫 A face oculta: abusos, violência e impunidade</h2>
+            <article>
+                <i class="bi bi-mic-mute-fill"></i>
+                <p> Entre conversas banais e memes inofensivos, existe uma parte muito mais sombria da plataforma que
+                    raramente é discutida. O Discord, por seu modelo descentralizado, virou terreno fértil para a
+                    propagação de comportamentos extremamente nocivos. Abusos psicológicos, manipulação, práticas de
+                    grooming (aliciamento de menores) e até a circulação de conteúdos ilegais acontecem em servidores
+                    fechados, longe dos olhos da moderação central.</p>
+
+                <p> Pior ainda: quando vítimas tentam denunciar, a resposta costuma ser insatisfatória ou inexistente. A
+                    responsabilidade é repassada ao administrador local, que pode estar envolvido ou simplesmente
+                    ignorar o problema.</p>
+
+                <p> Esse cenário de descaso e invisibilidade transforma a plataforma num ambiente perigoso para jovens e
+                    vulneráveis. E tudo isso com a aparência de uma comunidade alegre, animada, “do bem”.  A verdade é
+                    dura, mas precisa ser dita: o Discord, como muitas redes sociais, permite que o pior da internet se
+                    esconda atrás de avatares coloridos e servidores temáticos.</p>
+            </article>
+        </section>
+
+        <section class="conclusao" id="conclusao">
+            <h2 class="title">🤔 Para onde vamos?</h2>
+            <article>
+                <p>Discord é, acima de tudo, uma ferramenta. Mas como qualquer ferramenta, seu impacto depende de como é
+                    usada — e de como é regulada.</p>
+                <p>A comunidade digital que se formou ao seu redor tem um potencial enorme: pode ser um espaço de
+                    amizade, aprendizado e acolhimento. Mas também pode virar um reflexo distorcido da nossa
+                    incapacidade de lidar com os outros, com o diferente e com os próprios limites.</p>
+                <p>Por isso, a crítica não é um ataque — é um convite. Um convite a refletir: que tipo de espaço estamos
+                    ajudando a construir? Que tipo de presença queremos ter na internet? E o mais importante: estamos
+                    usando o Discord… ou estamos sendo usados por ele?</p>
+            </article>
+            <img src="assets/wumpuslike.gif" alt="Wumpus dando joinha 👍">
+            <footer>2025 © MoisesLN - Direitos reservados</footer>
         </section>
     </main>
 </body>

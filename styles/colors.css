@@ -16,7 +16,7 @@
 
     --red-section: #b70c0c;
     --red-transparent: rgba(243, 15, 15, 0.6);
-    --black-gradient: (to right, var(--gray-900), var(--gray-950) 70%);
+    --black-gradient: to right, var(--gray-900), var(--gray-950) 70%;
 
     --off-main: #111111; /* main ou é tema escuro ou claro. */
     --offer-main: #181818; /* off é uma variaçãozinha, e offer é uma variação maior rs */

@@ -1,6 +1,11 @@
 @import url('colors.css');
+@import url('animations.css');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+:root {
+    scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
@@ -34,7 +39,6 @@ header {
     nav {
         display: flex;
         justify-content: center;
-        align-items: center;
         gap: 2em;
         padding: .5em 1em;
         background-color: rgba(255, 255, 255, 0.1);
@@ -61,12 +65,14 @@ header {
 section {
     padding: 2em 5vw;
     padding-top: 80px;
-    height: 100vh;
+    min-height: 100vh;
+
 }
 
 h2 {
-    font-size: 2.5em;
+    font-size: 2em;
     margin-bottom: 1.25em;
+    letter-spacing: 1px;
 }
 
 .grid-container {
@@ -74,11 +80,10 @@ h2 {
     grid-template-columns: 2fr 1fr;
 
     p {
-        width: 700px;
+        max-width: 700px;
         text-indent: 2em;
         margin: 1em 0;
         line-height: 1.5;
-        font-size: 1.15em;
     }
 
     figure {
@@ -171,112 +176,163 @@ h2 {
 .exclusao {
     background-color: var(--offer-main);
     text-align: right;
-}
 
-
-@keyframes alternateToRed {
-    0% {
-        color: var(--discord-blue);
-        fill: var(--discord-blue);
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 
-    13% {
-        color: var(--discord-blue);
-        fill: var(--discord-blue);
-    }
-
-    15% {
-        color: var(--discord-red);
-        fill: var(--discord-red);
-    }
-
-    23% {
-        color: var(--discord-red);
-        fill: var(--discord-red);
-    }
-
-    25% {
-        color: var(--discord-blue);
-        fill: var(--discord-blue);
-    }
-
-    48% {
-        color: var(--discord-blue);
-        fill: var(--discord-blue);
-    }
-
-    50% {
-        color: var(--discord-red);
-        fill: var(--discord-red);
-    }
-
-    98% {
-        color: var(--discord-red);
-        fill: var(--discord-red);
-    }
-
-    100% {
-        color: var(--discord-blue);
-        fill: var(--discord-blue);
+    .grid-container {
+        grid-template-columns: 1fr 2fr;
     }
 }
 
-@keyframes alternatingShadow {
-    0% {
-        box-shadow: 0 0 24px 4px var(--discord-blue);
-    }
+.maleficios {
+    background-color: var(--red-section);
+    text-align: center;
 
-    13% {
-        box-shadow: 0 0 24px 4px var(--discord-blue);
-    }
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        position: relative;
 
-    15% {
-        box-shadow: 0 0 24px 4px var(--discord-red);
-    }
-
-    23% {
-        box-shadow: 0 0 24px 4px var(--discord-red);
-    }
-
-    25% {
-        box-shadow: 0 0 24px 4px var(--discord-blue);
-    }
-
-    48% {
-        box-shadow: 0 0 24px 4px var(--discord-blue);
-    }
-
-    50% {
-        box-shadow: 0 0 24px 4px var(--discord-red);
-    }
-
-    98% {
-        box-shadow: 0 0 24px 4px var(--discord-red);
-    }
-
-    100% {
-        box-shadow: 0 0 24px 4px var(--discord-blue);
+        i {
+            color: var(--red-transparent);
+            position: absolute;
+            font-size: 300px;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
     }
 }
 
-@keyframes floating {
-    0% {
-        transform: translateY(0);
+.conclusao {
+    background-image: linear-gradient(var(--black-gradient));
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 130px;
+
+    img {
+        position: absolute;
+        width: 150px;
+        bottom: 0;
+        left: 5vw;
     }
 
-    15% {
-        transform: translateY(-10px);
+    footer {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        translate: -50% -50%;
+        font-weight: 300;
+        font-size: 0.85em;
+    }
+}
+
+.maleficios p,
+.conclusao p {
+    max-width: 700px;
+    text-indent: 2em;
+    margin: 1em 0;
+    line-height: 1.5;
+    z-index: 1;
+}
+
+.initial-animation {
+    animation: showUp 1500ms ease 1 forwards;
+}
+
+.observed {
+    opacity: 0;
+}
+.popIn {
+    animation: popIn 1000ms ease 1 forwards;
+}
+
+
+@media (max-width: 950px) {
+    .inicio {
+        .title {
+            h1 {
+                font-size: 2.25em;
+            }
+            h3 {
+                font-size: 1.25em;
+            }
+        }
+    }
+    .logo svg {
+        height: 120px !important;
+        padding: 1em !important;
+    }
+    #wumpus {
+        width: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
     }
 
-    25% {
-        transform: translateY(0);
+    .inicio {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+        text-align: center;
     }
-
-    50% {
-        transform: translateY(-20px);
+    header nav {
+        gap: 1em;
     }
+}
 
-    100% {
-        transform: translateY(0);
+/* Navbar responsiva */
+nav i {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    
+    header {
+        justify-content: flex-start;
+        margin: 0 5vw;
+    }
+    nav{
+        flex-direction: column;
+        position: absolute;
+        top: 25%;
+        border-radius: 12px !important;
+        transition: all 0.2s ease;
+        max-height: 50px;
+        overflow: hidden;
+        justify-content: flex-start !important;
+        align-items: center;
+
+        i {
+            display: block;
+            font-size: 1.5em;
+            z-index: 2;
+        }
+
+        a {
+            transition: 0.2s ease all;
+        }
+
+        &.navShow {
+            max-height: 500px;
+        }
     }
 }
