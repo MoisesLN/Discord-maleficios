@@ -41,13 +41,31 @@ header {
         justify-content: center;
         gap: 2em;
         padding: .5em 1em;
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: var(--header-bg);
         backdrop-filter: blur(8px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        border: 1px solid var(--header-border);
         border-radius: 1000px;
 
         &:hover {
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid var(--header-hover);
+        }
+    }
+
+    .themeswitch {
+        padding: .5em .75em;
+        height: 50px;
+        width: 50px;
+        background-color: var(--header-bg);
+        border: 1px solid var(--header-border);
+        border-radius: 1000px;
+        position: absolute;
+        right: 2em;
+        cursor: pointer;
+        font-size: 1.25em;
+        transition: 0.2s ease all;
+
+        &:hover {
+            border: 1px solid var(--header-hover);
         }
     }
 
@@ -121,7 +139,7 @@ h2 {
         left: 0;
         width: 100%;
         height: 200px;
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), transparent);
+        background-image: linear-gradient(to bottom, var(--header-bg), transparent);
         filter: blur(8px);
         z-index: -1;
     }
@@ -238,6 +256,7 @@ h2 {
         background-color: rgba(0, 0, 0, 0.5);
         padding: .5em;
         border-radius: 8px;
+        color: #f0f0f0;
     }
 }
 
@@ -257,10 +276,14 @@ h2 {
 .observed {
     opacity: 0;
 }
+
 .popIn {
     animation: popIn 1000ms ease 1 forwards;
 }
 
+.spin {
+    animation: spinning 1000ms 1 forwards;
+}
 
 @media (max-width: 950px) {
     .inicio {
@@ -279,6 +302,12 @@ h2 {
     }
     #wumpus {
         width: 200px;
+    }
+}
+
+@media (max-width: 700px) {
+    header .themeswitch {
+        right: .25em;
     }
 }
 
@@ -308,6 +337,10 @@ nav i {
 }
 
 @media (max-width: 500px) {
+
+    header .themeswitch {
+        right: 2em;
+    }
     
     header {
         justify-content: flex-start;
